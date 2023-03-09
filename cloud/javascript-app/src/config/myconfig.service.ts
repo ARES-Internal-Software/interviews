@@ -1,6 +1,7 @@
 import { DynamicModule, Injectable } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from 'src/users/users.module';
+import { DB_Type } from './db_types.enum';
 import { MyConfigModule } from './myconfig.module';
 
 @Injectable()
@@ -11,7 +12,7 @@ export class MyConfigService {
         const config = {
             imports: [
                 TypeOrmModule.forRoot({
-                    type: 'mysql',
+                    type: process.env.DB_TYPE as DB_Type,
                     host: process.env.DB_HOST,
                     port: parseInt(process.env.DB_PORT),
                     username: process.env.DB_USERNAME,
