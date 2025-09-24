@@ -5,8 +5,8 @@
 ## App information
 
 - Nestjs REST App
-- Node Version 20.x
-- MySql Version 8.4.0 oder MariaDB 11.3.2
+- Node Version 22.19.0 (LTS)
+- MySql Version 8.4.6 (LTS) oder MariaDB 11.8 (LTS)
 - Port: 3000
 - Environment variables:
   - DB_HOST (Database Host for MySql)
